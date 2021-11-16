@@ -47,3 +47,7 @@
 // Utilities
 @import '../bootstrap-scss/utilities/api';
 // scss-docs-end import-stack
+
+@import 'partials/main';
+@import 'partials/classes';
+@import 'partials/header';
