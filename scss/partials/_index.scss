@@ -17,6 +17,19 @@
     color: white;
     text-align: center;
   }
+
+  &__search {
+    width: 100%;
+    background-color: $gray-light;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+
+    &--label{
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 .cart {

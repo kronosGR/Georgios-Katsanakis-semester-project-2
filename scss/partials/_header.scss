@@ -1,6 +1,7 @@
 .logo{
-  width: 100px;
-  padding: 10px;
+  width: 80px;
+  border-bottom: 1px solid $black;
+  border-top: 1px solid $black;
 
   &:hover{
     border-bottom: 1px solid $white;
@@ -12,6 +13,8 @@
 
   &__a{
     font-family: $heading-font;
+    border-bottom: 1px solid $black;
+    border-top: 1px solid $black;
   }
   
   &__icon{
