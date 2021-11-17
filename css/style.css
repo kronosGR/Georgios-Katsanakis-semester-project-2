@@ -11069,10 +11069,16 @@ fieldset:disabled .btn {
 }
 
 body {
+  font-family: "Roboto", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #212529;
   font-size: 16px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 1rem 0;
+  font-family: "Open Sans Condensed", serif;
 }
 
 .bg-dark {
@@ -11101,5 +11107,105 @@ body {
 .nav__a:hover {
   border-bottom: 1px solid #f2f2f2;
   border-top: 1px solid #f2f2f2;
+}
+
+.hero {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.cont {
+  width: 95%;
+  border: 1px solid #bfbfbf;
+  -webkit-box-shadow: 3px 3px 6px #bfbfbf;
+          box-shadow: 3px 3px 6px #bfbfbf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont__featured {
+  width: 100%;
+  background-color: #bfbfbf;
+  color: white;
+  text-align: center;
+}
+
+.cart {
+  width: 250px;
+  border: 1px solid #595959;
+  margin: 1rem;
+  -webkit-box-shadow: 4px 4px 6px #595959;
+          box-shadow: 4px 4px 6px #595959;
+}
+
+.cart__title {
+  font-family: "Open Sans Condensed", serif;
+  margin: 1rem 1rem;
+  font-size: 1.4rem;
+}
+
+.cart__img {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  margin: 1rem;
+}
+
+.cart__description {
+  margin: 1rem 1rem;
+}
+
+.cart__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #595959;
+  padding: 0.5rem;
+}
+
+.cart__price {
+  font-family: "Open Sans Condensed", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart__info {
+  text-decoration: none;
+  font-family: "Open Sans Condensed", serif;
+  font-size: 1.2rem;
+  color: #212529;
+}
+
+.cart__info:hover {
+  color: #212529;
+  -webkit-transform: skew(-15deg);
+          transform: skew(-15deg);
+}
+
+.cart:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+}
+
+footer {
+  margin: 2rem 0 0;
+  padding: 1rem;
+  background-color: #212529;
+  color: #f2f2f2;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
