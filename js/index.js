@@ -1,4 +1,4 @@
 import * as Strapi from './strapi.js';
+import Hero from './components/hero-banner.js';
 
-
-Strapi.getHero();
+Hero(Strapi.getHero());

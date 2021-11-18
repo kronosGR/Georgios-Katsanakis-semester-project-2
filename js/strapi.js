@@ -17,7 +17,7 @@ export async function getHero() {
     const res = await fetch(STRAPI_ULR + 'Home');
     const json = await res.json();
     hideLoader();
-    console.log(json);
+    return await json;
   }
   catch (err) {
     console.log(err);
