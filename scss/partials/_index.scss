@@ -37,6 +37,19 @@
   border: 1px solid $gray-dark;
   margin: 1rem;
   box-shadow: 4px 4px 6px $gray-dark;
+  text-align: center;
+  
+  &__link{
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__link:hover{
+    color: $black;
+    cursor: pointer;
+  }
+
+  
 
   &__title{
     font-family: $heading-font;
@@ -69,15 +82,9 @@
   }
 
   &__info{
-    text-decoration: none;
     font-family: $heading-font;
     font-size: 1.2rem;
     color: $black;
-  }
-
-  &__info:hover{
-    color: $black;
-    transform: skew(-15deg);
   }
 
   &:hover{

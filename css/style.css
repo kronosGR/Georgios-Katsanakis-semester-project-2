@@ -11079,6 +11079,40 @@ body {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 1rem 0;
   font-family: "Open Sans Condensed", serif;
+  font-weight: bold;
+}
+
+.error {
+  top: 15vh;
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  font-family: "Open Sans Condensed", serif;
+  font-size: 1.4rem;
+}
+
+.error-text {
+  color: red;
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .loading {
@@ -11218,6 +11252,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 1rem;
   -webkit-box-shadow: 4px 4px 6px #595959;
           box-shadow: 4px 4px 6px #595959;
+  text-align: center;
+}
+
+.cart__link {
+  text-decoration: none;
+  color: #212529;
+}
+
+.cart__link:hover {
+  color: #212529;
+  cursor: pointer;
 }
 
 .cart__title {
@@ -11255,16 +11300,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .cart__info {
-  text-decoration: none;
   font-family: "Open Sans Condensed", serif;
   font-size: 1.2rem;
   color: #212529;
-}
-
-.cart__info:hover {
-  color: #212529;
-  -webkit-transform: skew(-15deg);
-          transform: skew(-15deg);
 }
 
 .cart:hover {
