@@ -1,5 +1,5 @@
 import * as Strapi from '../strapi.js';
-import featured_item from './featured_item.js';
+import cart_item from './cart_item.js';
 
 const cont = document.querySelector('.cont');
 
@@ -13,7 +13,7 @@ export default async function () {
   `
 
   featuredList.forEach(item => {
-    el += featured_item(item);
+    el += cart_item(item);
   })
 
   cont.innerHTML = el;

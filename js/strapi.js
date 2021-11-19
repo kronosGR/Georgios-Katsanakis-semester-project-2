@@ -56,3 +56,25 @@ export async function getProduct(id) {
     return null;
   }
 }
+
+export async function getFilteredProducts(search) {
+  const urlExtra = search
+    ? 'products/?_where[_or][0][title_contains]=' +
+      search +
+      '&_where[_or][1][description_contains]=' +
+      search
+    : 'products/';
+
+  try {
+    showLoader();
+    const res = await fetch(STRAPI_URL + urlExtra);
+    const json = await res.json();
+    hideLoader();
+    return json;
+  } catch (err) {
+    Utils.showError('Sorry for the inconvenience. Something is out of order');
+    console.log(err);
+    hideLoader();
+    return null;
+  }
+}
