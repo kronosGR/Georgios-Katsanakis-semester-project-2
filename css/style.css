@@ -11421,4 +11421,42 @@ footer {
   -webkit-transform: translate(4px, 4px);
           transform: translate(4px, 4px);
 }
+
+.shopping-cart__total {
+  padding: 1rem;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.shop-cart-item {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #212529;
+}
+
+.shop-cart-item__img {
+  width: 100px;
+}
+
+.shop-cart-item__title {
+  margin: 0 1rem;
+  font-family: "Open Sans Condensed", serif;
+  font-size: 1.2rem;
+}
+
+.shop-cart-item__title--link {
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Open Sans Condensed", serif;
+}
+
+.shop-cart-item:hover {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  background-color: rgba(1, 1, 1, 0.2);
+}
 /*# sourceMappingURL=style.css.map */
