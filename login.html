@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pet Paradise | </title>
-  <meta name="description" content="">
+  <title>Pet Paradise | Login</title>
+  <meta name="description" content="Online store for pets. Everything you can imagine.">
   <link rel="stylesheet" href="/css/style.css">
-  <script src="js/product-details.js" type="module"></script>
+  <script src="/js/login.js" type="module"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
   </div>
   <header class="p-3 bg-dark text-white ">
     <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-md-start nav">
+      <div class="d-flex flex-wrap align-items-center justify-content-lg-start nav">
         <a href="index.html" class="d-flex align-items-center col-1 mb-2 mb-lg-0 text-white text-decoration-none">
           <img src="/assets/logo-sm.png" alt="logo" class="logo" />
         </a>
@@ -41,8 +41,24 @@
       </div>
     </div>
   </header>
-  <main class="d-flex flex-wrap justify-content-center align-items-start">
-
+  <main class="d-flex flex-wrap justify-content-center mt-4">
+    <div id="hero"></div>
+    <h1>Login</h1>
+    <div class="cont">
+      <form class="login-form">
+        <div class="form-group ">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+          </div>
+          <div class="form-group mt-3">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">          
+            <small id="emailError" class="text-danger d-none">Wrong credentials</small>
+        </div>
+        <button type="submit" class="btn mt-2 btn-primary login-form__button w-100">Login</button>
+      </form>
+    </div>
   </main>
   <footer>
     KronosGR Copyright &copy 2021
