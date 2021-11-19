@@ -13,7 +13,6 @@ export default async function () {
   `
 
   featuredList.forEach(item => {
-    console.log(featured_item(item))
     el += featured_item(item);
   })
 

@@ -11369,8 +11369,8 @@ footer {
 }
 
 .product-cont__cta {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
   text-align: center;
   text-decoration: none;
   font-family: "Open Sans Condensed", serif;

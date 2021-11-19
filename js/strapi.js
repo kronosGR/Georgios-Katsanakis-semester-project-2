@@ -4,14 +4,13 @@ const STRAPI_URL = 'https://morning-refuge-32900.herokuapp.com/';
 
 const loading = document.querySelector('.loading');
 
-const showLoader = ()=> {
-  loading.style.top = "0px";
-}
+const showLoader = () => {
+  loading.style.top = '0px';
+};
 
 const hideLoader = () => {
-  loading.style.top = "-10000px";
-
-}
+  loading.style.top = '-10000px';
+};
 
 export async function getHero() {
   showLoader();
@@ -20,25 +19,40 @@ export async function getHero() {
     const json = await res.json();
     hideLoader();
     return json;
-  }
-  catch (err) {
+  } catch (err) {
     Utils.showError('Sorry for the inconvenience. Something is out of order');
     console.log(err);
     hideLoader();
+    return null;
   }
 }
 
-export async function getFeatured(){
+export async function getFeatured() {
   showLoader();
-  try{
-    const res = await fetch(STRAPI_URL+ 'products?featured=true')
+  try {
+    const res = await fetch(STRAPI_URL + 'products?featured=true');
     const json = await res.json();
     hideLoader();
     return json;
-  } catch (err){
+  } catch (err) {
     Utils.showError('Sorry for the inconvenience. Something is out of order');
     console.log(err);
-    hideLoader();    
+    hideLoader();
+    return null;
   }
 }
 
+export async function getProduct(id) {
+  try {
+    showLoader();
+    const res = await fetch(STRAPI_URL + 'products/' + id);
+    const json = await res.json();
+    hideLoader();
+    return json;
+  } catch (err) {
+    Utils.showError('Sorry for the inconvenience. Something is out of order');
+    console.log(err);
+    hideLoader();
+    return null;
+  }
+}
