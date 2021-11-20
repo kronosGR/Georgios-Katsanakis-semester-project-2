@@ -11486,4 +11486,8 @@ footer {
   -webkit-transform: translate(3px, 3px);
           transform: translate(3px, 3px);
 }
+
+.login-form__button:focus {
+  background-color: green;
+}
 /*# sourceMappingURL=style.css.map */

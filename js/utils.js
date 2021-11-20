@@ -1,4 +1,15 @@
 const CART = 'cart';
+const AUTH = 'auth';
+
+/**
+ * @description check if an email address is valid
+ * @param email the email to be checked
+ */
+export const isEmailValid = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
 
 /**
  * @description Show an error to the screen
@@ -94,4 +105,60 @@ export function updateCartCount(el) {
   const counter = document.querySelector(el);
   const total = getCart().length;
   counter.innerText = `(${total})`;
+}
+
+/**
+ * @description toggle to login or logout depending the auth status
+ * @param el the cart counter element selector
+ */
+export function updateLoginBtn(el) {
+  const login = document.querySelector(el);
+  if (checkIfLoggedIn()) {
+    login.innerText = 'Logout';
+    login.addEventListener('click', (evt)=> {
+      evt.preventDefault();
+      logout();
+      window.location.reload();
+    })
+  } else {
+    login.innerText = 'Login';
+    login.href = 'login.html';
+  }
+}
+
+/**
+ * @description check if the user is authorized to use the page
+ *              if not will be redirected to home page
+ */
+export function checkAuthorization(){
+  if (!checkIfLoggedIn()) window.location.href = '/';
+}
+
+/**
+ * @description set authorization to localstorage
+ * @param jwt login js web token
+ */
+export function setAuth(jwt) {
+  localStorage.setItem(AUTH, jwt);
+}
+
+/**
+ * @description logout user by deleting from localstorage the jwt
+ */
+export function logout() {
+  localStorage.removeItem(AUTH);
+}
+
+/**
+ * @description return the jwt for future use
+ */
+export function getToken() {
+  return localStorage.getItem(AUTH) || '';
+}
+
+/**
+ * @description check if user is logged in
+ */
+export function checkIfLoggedIn() {
+  return getToken().length > 1 ? true : false;
 }

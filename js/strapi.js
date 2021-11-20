@@ -99,3 +99,28 @@ export async function getFilteredProducts(search) {
     return null;
   }
 }
+
+export async function login(email, password){
+  try{
+    showLoader();
+    const data = JSON.stringify({
+      identifier: email,
+      password: password
+    })
+    const res = await fetch(STRAPI_URL+'auth/local', {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    const json = await res.json();
+    hideLoader();
+    return json;
+  }catch(err){
+    Utils.showError('Sorry for the inconvenience. Something is out of order');
+    console.log(err);
+    hideLoader();
+    return null;
+  }
+}
