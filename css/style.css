@@ -11490,4 +11490,13 @@ footer {
 .login-form__button:focus {
   background-color: green;
 }
+
+.acc__menu--link {
+  font-family: "Open Sans Condensed", serif;
+  font-size: 1.4rem;
+  color: #212529;
+  border-bottom: 1px solid #212529;
+  border-bottom: 1px solid #212529;
+  margin: 0 0.5rem;
+}
 /*# sourceMappingURL=style.css.map */
