@@ -115,7 +115,10 @@ export function updateLoginBtn(el) {
   const login = document.querySelector(el);
   const account = document.querySelector('#account');
   if (checkIfLoggedIn()) {
-    login.innerText = 'Logout';
+    login.innerHTML = `
+      <img src="assets/icons/logout.png" alt="logout" class="nav__icon" />
+      Logout
+    `
     login.addEventListener('click', (evt) => {
       evt.preventDefault();
       logout();
@@ -123,7 +126,10 @@ export function updateLoginBtn(el) {
     });
     account.style.display = 'inline';
   } else {
-    login.innerText = 'Login';
+    login.innerHTML = `
+      <img src="assets/icons/login.png" alt="home" class="nav__icon" />
+      Login
+    `
     login.href = 'login.html';
     account.style.display = 'none';
   }

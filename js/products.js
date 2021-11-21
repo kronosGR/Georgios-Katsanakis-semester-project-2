@@ -1,4 +1,4 @@
-import { updateCartCount } from './utils.js';
+import { updateCartCount, updateLoginBtn } from './utils.js';
 import { getFilteredProducts } from './strapi.js';
 import Cart_item from './components/cart_item.js';
 
@@ -7,6 +7,7 @@ const searchEl = document.querySelector('#search');
 
 // update the item
 updateCartCount('#counter');
+updateLoginBtn('#login');
 
 showProducts();
 

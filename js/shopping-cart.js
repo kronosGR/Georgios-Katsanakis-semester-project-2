@@ -1,10 +1,11 @@
-import { updateCartCount, getCart } from './utils.js';
+import { updateCartCount, getCart, updateLoginBtn } from './utils.js';
 import shoppingCart_item from './components/shopping-cart_item.js';
 
 const cont = document.querySelector('.cont');
 
 // update the item
 updateCartCount('#counter');
+updateLoginBtn('#login');
 
 showCart();
 
@@ -15,7 +16,7 @@ async function showCart() {
     let sum = 0;
 
     cart.forEach((item) => {
-      cont.innerHTML += shoppingCart_item(item)
+      cont.innerHTML += shoppingCart_item(item);
       sum += item.price;
     });
 
@@ -23,9 +24,9 @@ async function showCart() {
     <div class="shopping-cart__total">
      Total: $${Number(sum).toFixed(2)}
     </div>
-    `
+    `;
   } else {
     // show cart is empty
-    cont.innerHTML  = '<span class="no-result">No products in your shopping cart!</span>';
+    cont.innerHTML = '<span class="no-result">No products in your shopping cart!</span>';
   }
 }

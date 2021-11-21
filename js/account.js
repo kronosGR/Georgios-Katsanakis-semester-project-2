@@ -1,5 +1,7 @@
-import { updateLoginBtn, checkAuthorization } from './utils.js';
+import { updateLoginBtn, checkAuthorization, updateCartCount} from './utils.js';
 
+
+updateCartCount('#counter');
 updateLoginBtn('#login');
 checkAuthorization();
 

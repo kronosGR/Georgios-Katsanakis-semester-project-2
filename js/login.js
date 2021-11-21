@@ -1,4 +1,4 @@
-import { isEmailValid, setAuth } from './utils.js';
+import { isEmailValid, setAuth, updateLoginBtn } from './utils.js';
 import { login } from './strapi.js';
 
 const emailEl = document.querySelector('#email');
@@ -7,14 +7,15 @@ const errorEl = document.querySelector('#error');
 const buttonEl = document.querySelector('form button');
 const form = document.querySelector('form');
 
+updateLoginBtn('#login');
+
 form.addEventListener('submit', async (evt) => {
   evt.preventDefault();
   const res = await login(emailEl.value, passEl.value);
-  
+
   if (res.error) {
-    errorEl.classList.remove('d-none')
-  }
-  else {
+    errorEl.classList.remove('d-none');
+  } else {
     errorEl.classList.add('d-none');
     setAuth(res.jwt);
 
