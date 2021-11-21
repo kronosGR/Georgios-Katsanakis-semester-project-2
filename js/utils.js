@@ -113,16 +113,19 @@ export function updateCartCount(el) {
  */
 export function updateLoginBtn(el) {
   const login = document.querySelector(el);
+  const account = document.querySelector('#account');
   if (checkIfLoggedIn()) {
     login.innerText = 'Logout';
-    login.addEventListener('click', (evt)=> {
+    login.addEventListener('click', (evt) => {
       evt.preventDefault();
       logout();
       window.location.reload();
-    })
+    });
+    account.style.display = 'inline';
   } else {
     login.innerText = 'Login';
     login.href = 'login.html';
+    account.style.display = 'none';
   }
 }
 
@@ -130,7 +133,7 @@ export function updateLoginBtn(el) {
  * @description check if the user is authorized to use the page
  *              if not will be redirected to home page
  */
-export function checkAuthorization(){
+export function checkAuthorization() {
   if (!checkIfLoggedIn()) window.location.href = '/';
 }
 
