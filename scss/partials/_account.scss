@@ -1,13 +1,23 @@
-.acc__menu{
+.acc {
+  __menu {
+    &--link {
+      font-family: $heading-font;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $black;
+      border-bottom: 1px solid $black;
+      margin: 0 0.5rem;
 
-  &--link{
-    font-family: $heading-font;
-    font-size: 1.4rem;
-    color: $black;
-    border-bottom: 1px solid $black;
-    border-bottom: 1px solid $black;
-    margin: 0 0.5rem;
+      &:hover,
+      &--active {
+        background-color: $black;
+        color: white;
+      }
+    }
+  }
 
-    
+  &__products{
+    margin-bottom: 4rem;
+    width: 95%;
   }
 }

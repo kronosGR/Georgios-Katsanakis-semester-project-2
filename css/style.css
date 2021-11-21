@@ -11491,12 +11491,22 @@ footer {
   background-color: green;
 }
 
-.acc__menu--link {
+.acc __menu--link {
   font-family: "Open Sans Condensed", serif;
   font-size: 1.4rem;
+  font-weight: 500;
   color: #212529;
   border-bottom: 1px solid #212529;
-  border-bottom: 1px solid #212529;
   margin: 0 0.5rem;
+}
+
+.acc __menu--link:hover, .acc __menu--link--active {
+  background-color: #212529;
+  color: white;
+}
+
+.acc__products {
+  margin-bottom: 4rem;
+  width: 95%;
 }
 /*# sourceMappingURL=style.css.map */

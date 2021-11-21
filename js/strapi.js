@@ -55,6 +55,24 @@ export async function getFeatured() {
 }
 
 /**
+ * @description get all products *
+ */
+export async function getProducts() {
+  showLoader();
+  try {
+    const res = await fetch(STRAPI_URL + 'products');
+    const json = await res.json();
+    hideLoader();
+    return json;
+  } catch (err) {
+    Utils.showError('Sorry for the inconvenience. Something is out of order');
+    console.log(err);
+    hideLoader();
+    return null;
+  }
+}
+
+/**
  * @description get specific program from strapi backend
  * @param id the id of the product to be fetched
  */
@@ -100,24 +118,24 @@ export async function getFilteredProducts(search) {
   }
 }
 
-export async function login(email, password){
-  try{
+export async function login(email, password) {
+  try {
     showLoader();
     const data = JSON.stringify({
       identifier: email,
-      password: password
-    })
-    const res = await fetch(STRAPI_URL+'auth/local', {
+      password: password,
+    });
+    const res = await fetch(STRAPI_URL + 'auth/local', {
       method: 'POST',
       body: data,
       headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+        'Content-Type': 'application/json',
+      },
+    });
     const json = await res.json();
     hideLoader();
     return json;
-  }catch(err){
+  } catch (err) {
     Utils.showError('Sorry for the inconvenience. Something is out of order');
     console.log(err);
     hideLoader();
