@@ -159,14 +159,50 @@ export async function deleteProduct(id) {
     const res = await fetch(STRAPI_URL + 'products/' + id, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + Utils.getToken(),
+        Authorization: 'Bearer ' + Utils.getToken(),
       },
     });
-    const json =  await res.json();
+    const json = await res.json();
     hideLoader();
     return json;
   } catch (err) {
+    Utils.showError('Sorry for the inconvenience. Something is out of order');
+    console.log(err);
+    hideLoader();
+    return err;
+  }
+}
+
+export async function upload(file) {
+  console.log(file)
+  const data = new FormData(file);
+  // data.append('image', file);
+
+  const res = await fetch(STRAPI_URL + 'upload', {
+    method: 'POST',
+    body: data,
+    headers: {
+      Authorization: 'Bearer ' + Utils.getToken(),
+    },
+  });
+  const json = await res.json();
+  console.log(json);
+}
+
+export async function editProduct(product,id){
+  try{
+    const headers = new Headers();
+    headers.append("Authorization", "Bearer " +Utils.getToken())
+    headers.append('Content-Type', 'application/json')
+
+    const res= await fetch(STRAPI_URL + 'products/'+id, {
+      method: 'PUT',
+      body: JSON.stringify(product),
+      headers: headers,
+    })
+    const json = await res.json()
+    return json;
+  }catch (err) {
     Utils.showError('Sorry for the inconvenience. Something is out of order');
     console.log(err);
     hideLoader();
