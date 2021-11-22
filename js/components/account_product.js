@@ -7,7 +7,7 @@ export default function (item) {
       <img class="col-1 product-item__img" src="${item.image.formats.thumbnail.url}" alt="${item.title}"/>
       <span class="col-5 product-item__title">${item.title}</span> 
       <span class="col-2 product-item__price">$${item.price}</span>
-      ${EditProduct(item)}
+      ${EditProduct(item.id)}
       ${DeleteProduct(item.id)}
     </div>
     <hr>
