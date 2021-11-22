@@ -118,6 +118,11 @@ export async function getFilteredProducts(search) {
   }
 }
 
+/**
+ * @description login to BE with email and password
+ * @param email
+ * @param password
+ */
 export async function login(email, password) {
   try {
     showLoader();
@@ -140,5 +145,31 @@ export async function login(email, password) {
     console.log(err);
     hideLoader();
     return null;
+  }
+}
+
+/**
+ * @description delete a product from the DB
+ * @param id the product id to be deleted
+ */
+export async function deleteProduct(id) {
+  try {
+    showLoader();
+    //const data = JSON.stringify(id)
+    const res = await fetch(STRAPI_URL + 'products/' + id, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + Utils.getToken(),
+      },
+    });
+    const json =  await res.json();
+    hideLoader();
+    return json;
+  } catch (err) {
+    Utils.showError('Sorry for the inconvenience. Something is out of order');
+    console.log(err);
+    hideLoader();
+    return err;
   }
 }
