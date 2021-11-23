@@ -32,6 +32,20 @@ export function showError(msg) {
 }
 
 /**
+ * @description check if an url address is valid
+ * @param url the url to be checked
+ */
+export function validUrl(url) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+
+    '((\\d{1,3}\\.){3}\\d{1,3}))'+
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ 
+    '(\\?[;&a-z\\d%_.~+=-]*)?'+
+    '(\\#[-a-z\\d_]*)?$','i'); 
+  return !!pattern.test(url);
+}
+
+/**
  * @description get a specific query string
  * @param key the name of the key to get
  */

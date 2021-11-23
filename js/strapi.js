@@ -173,36 +173,50 @@ export async function deleteProduct(id) {
   }
 }
 
-export async function upload(file) {
-  console.log(file)
-  const data = new FormData(file);
-  // data.append('image', file);
-
-  const res = await fetch(STRAPI_URL + 'upload', {
-    method: 'POST',
-    body: data,
-    headers: {
-      Authorization: 'Bearer ' + Utils.getToken(),
-    },
-  });
-  const json = await res.json();
-  console.log(json);
-}
-
-export async function editProduct(product,id){
-  try{
+/**
+ * @description edit a product
+ * @param product the object to be posted
+ * @param id  the product id to be edited
+ */
+export async function editProduct(product, id) {
+  try {
+    showLoader();
     const headers = new Headers();
-    headers.append("Authorization", "Bearer " +Utils.getToken())
-    headers.append('Content-Type', 'application/json')
+    headers.append('Authorization', 'Bearer ' + Utils.getToken());
+    headers.append('Content-Type', 'application/json');
 
-    const res= await fetch(STRAPI_URL + 'products/'+id, {
+    const res = await fetch(STRAPI_URL + 'products/' + id, {
       method: 'PUT',
       body: JSON.stringify(product),
       headers: headers,
-    })
-    const json = await res.json()
+    });
+    const json = await res.json();
+    hideLoader();
     return json;
-  }catch (err) {
+  } catch (err) {
+    Utils.showError('Sorry for the inconvenience. Something is out of order');
+    console.log(err);
+    hideLoader();
+    return err;
+  }
+}
+
+export async function addProduct(product) {
+  try {
+    showLoader();
+    const headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + Utils.getToken());
+    headers.append('Content-type', 'application/json');
+
+    const res = await fetch(STRAPI_URL + 'products', {
+      method: 'POST',
+      body: JSON.stringify(product),
+      headers: headers,
+    });
+    const json = await res.json();
+    hideLoader();
+    return json;
+  } catch (err) {
     Utils.showError('Sorry for the inconvenience. Something is out of order');
     console.log(err);
     hideLoader();

@@ -15,6 +15,11 @@
     width: 100px;
   }
 
+  &__price{
+    text-align: right;
+    padding-right: 1rem;
+  }
+
   &__title{
     margin: 0 1rem;
     font-family: $heading-font;
