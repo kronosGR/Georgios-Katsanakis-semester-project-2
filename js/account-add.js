@@ -1,4 +1,4 @@
-import { addProduct} from './strapi.js';
+import { addProduct } from './strapi.js';
 import { updateCartCount, updateLoginBtn, validUrl } from './utils.js';
 
 const titleEl = document.querySelector('#title');
@@ -45,4 +45,13 @@ formEl.addEventListener('submit', async (evt) => {
   product.featured = featuredEl.checked;
   product.image_url = imageUp.value;
   console.log(await addProduct(product));
+
+  const feedback = document.querySelector('.feedback');
+  formEl.reset()
+  feedback.style.display = 'inline';
+  feedback.style.height = '65px';
+  setTimeout(() => {
+    feedback.style.display = 'none';
+    feedback.style.height = '0px';
+  }, 6000);
 });
