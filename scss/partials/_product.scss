@@ -23,7 +23,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    border-top: 1px solid $gray-dark;
+    border-top: 1px solid $green;
     padding: 0.5rem;
   }
 
@@ -34,14 +34,14 @@
   }
 
   &__cta {
-    flex-basis: 35%;
+    flex-basis: 40%;
     text-align: center;
     text-decoration: none;
     font-family: $heading-font;
     font-size: 1.2rem;
     color: $white;
     font-weight: bold;
-    background-color: $gray-dark;
+    background-color: $green;
     box-shadow: 4px 4px 6px $gray-light;
   }
 

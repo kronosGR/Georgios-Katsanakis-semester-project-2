@@ -7,7 +7,7 @@ It is an online store that uses strapi hosted on heroku as backend
 * Bootstrap
 * SASS
 * JS components
-* Strapi hosted on heroku and configured to save the images to cloudinary
+* Strapi hosted on heroku and configured to save the images to cloudinary when uploaded through strapi
 
 
 ## Notes

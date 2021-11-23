@@ -29,7 +29,7 @@
   color: $black;
 
   &__img {
-    width: 70px;
+    width: 60px;
   }
 
   &__title {
@@ -40,10 +40,11 @@
 
   &__price {
     text-align: right;
+    margin-right: 5px;
   }
 
   &__delete {
-    width: 30px;
+    width: 25px;
 
     &:hover {
       filter: grayscale(20%);
