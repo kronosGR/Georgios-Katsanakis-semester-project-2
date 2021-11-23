@@ -2,7 +2,6 @@ import DeleteProduct from './account_product_delete.js';
 import EditProduct from './account_product_edit.js'
 
 export default function (item) {
-  console.log(item)
   return `
     <div log class="d-flex flex-nowrap align-items-center col-12 product-item" href="product-details.html?id=${item.id}">
       <img class="col-1 product-item__img" src="${item.image_url}" alt="${item.title}"/>

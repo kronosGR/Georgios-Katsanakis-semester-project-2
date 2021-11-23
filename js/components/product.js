@@ -17,7 +17,7 @@ export default async function (id) {
   <h1 class="mt-5">${product.title}</h1>
   <div class="product-cont">
 
-    <img src="${product.image.url}" alt="${product.title}" class="product-cont__img" />
+    <img src="${product.image_url}" alt="${product.title}" class="product-cont__img" />
     <p class="product-cont__desc">${product.description}</p>
     <div class="product-cont__footer">
       <div class="product-cont__price">$${product.price}</div>

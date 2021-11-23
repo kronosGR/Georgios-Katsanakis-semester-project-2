@@ -44,7 +44,7 @@ formEl.addEventListener('submit', async (evt) => {
   product.description = descEl.value;
   product.featured = featuredEl.checked;
   product.image_url = imageUp.value;
-  console.log(await addProduct(product));
+  await addProduct(product);
 
   const feedback = document.querySelector('.feedback');
   formEl.reset()
