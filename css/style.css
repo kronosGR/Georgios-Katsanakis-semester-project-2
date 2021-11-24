@@ -11509,6 +11509,7 @@ footer {
   display: flex;
   text-decoration: none;
   color: #212529;
+  width: 100%;
 }
 
 .shop-cart-item__img {
@@ -11536,6 +11537,18 @@ footer {
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
   background-color: rgba(1, 1, 1, 0.2);
+}
+
+@media screen and (min-width: 768px) {
+  .shop-cart-item__img {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .shop-cart-item__img {
+    width: 130px;
+  }
 }
 
 .login-form {
