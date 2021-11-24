@@ -11309,7 +11309,7 @@ header {
 }
 
 .cart {
-  width: 250px;
+  width: 350px;
   border: 1px solid #57973f;
   margin: 1rem;
   -webkit-box-shadow: 4px 4px 6px #57973f;
@@ -11331,6 +11331,8 @@ header {
   font-family: "Open Sans Condensed", serif;
   margin: 1rem 1rem;
   font-size: 1.4rem;
+  display: inline-block;
+  height: 50px;
 }
 
 .cart__img {
@@ -11338,10 +11340,15 @@ header {
   display: block;
   margin: 0 auto;
   margin: 1rem;
+  display: inline-block;
+  height: 300px;
 }
 
 .cart__description {
   margin: 1rem 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .cart__footer {
@@ -11353,6 +11360,7 @@ header {
           justify-content: space-between;
   border-top: 1px solid #57973f;
   padding: 0.5rem;
+  height: 50px;
 }
 
 .cart__price {

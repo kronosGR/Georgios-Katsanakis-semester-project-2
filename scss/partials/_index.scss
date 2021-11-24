@@ -44,7 +44,7 @@
 }
 
 .cart {
-  width: 250px;
+  width: 350px;
   border: 1px solid $green;
   margin: 1rem;
   box-shadow: 4px 4px 6px $green;
@@ -58,14 +58,14 @@
   &__link:hover{
     color: $black;
     cursor: pointer;
-  }
-
-  
+  }  
 
   &__title{
     font-family: $heading-font;
     margin: 1rem 1rem;
     font-size: 1.4rem;
+    display: inline-block;
+    height:50px;
   }
 
   &__img{
@@ -73,10 +73,13 @@
     display: block;
     margin: 0 auto;
     margin: 1rem;
+    display: inline-block;
+    height:300px;
   }
 
   &__description{
-    margin: 1rem 1rem;    
+    margin: 1rem 1rem;  
+    flex:1;  
   }
 
   &__footer{
@@ -84,6 +87,7 @@
     justify-content: space-between;
     border-top: 1px solid $green;
     padding: 0.5rem;
+    height:50px;
   }
 
   &__price{
