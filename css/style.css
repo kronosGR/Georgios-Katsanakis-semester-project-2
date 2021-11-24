@@ -11488,6 +11488,13 @@ footer {
           transform: translate(4px, 4px);
 }
 
+@media screen and (min-width: 992px) {
+  .product-cont {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
 .shopping-cart__total {
   padding: 1rem;
   display: inline-block;

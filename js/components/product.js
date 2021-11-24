@@ -14,7 +14,7 @@ export default async function (id) {
   updateTitleAndDescription(product.title, product.description);
 
   const html = `
-  <h1 class="mt-5">${product.title}</h1>
+  <h1 class="w-100 text-center m-5">${product.title}</h1>
   <div class="product-cont">
 
     <img src="${product.image_url}" alt="${product.title}" class="product-cont__img" />
