@@ -130,7 +130,7 @@ export function updateLoginBtn(el) {
   const account = document.querySelector('#account');
   if (checkIfLoggedIn()) {
     login.innerHTML = `
-      <img src="assets/icons/logout.png" alt="logout" class="nav__icon--sm" />
+      <img src="assets/icons/logout.png" alt="logout" class="nav__icon__nw" />
       Logout
     `
     login.addEventListener('click', (evt) => {
@@ -141,7 +141,7 @@ export function updateLoginBtn(el) {
     account.style.display = 'inline';
   } else {
     login.innerHTML = `
-      <img src="assets/icons/login.png" alt="home" class="nav__icon--sm" />
+      <img src="assets/icons/login.png" alt="home" class="nav__icon__nw" />
       Login
     `
     login.href = 'login.html';

@@ -14,6 +14,10 @@ header {
 }
 
 .nav {
+
+  button{
+    color: white;
+  }
   &__a {
     font-family: $heading-font;
     font-size: 1.2rem;
@@ -25,11 +29,11 @@ header {
   &__icon {
     height: 30px;
     margin: 0 5px;
-  }
 
-  &__icon--sm {
-    height: 20px;
-    margin: 0 5px;
+    &__nw{
+      width: 25px;
+      margin: 0 5px;
+    }
   }
 
   &__a:hover,
@@ -39,6 +43,3 @@ header {
   }
 }
 
-.sec{
-  font-size: 0.8rem;
-}
