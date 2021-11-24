@@ -24,7 +24,7 @@
 
   &__featured {
     width: 100%;
-    background-color: $gray-light;
+    background-color: $green;
     color: white;
     text-align: center;
   }
@@ -112,4 +112,29 @@ footer{
   color: $white;
   text-align: center;
   font-weight: bold;
+}
+
+@media screen and(min-width: $medium-width) {
+  .cont{
+    width: 90%;
+    margin: 0 auto;
+
+    &__featured{
+      flex-direction: row;
+    }
+  }
+
+  .hero{
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and(min-width: $large-width) {
+  .cont{
+    width: 80%;
+    margin: 0 auto;
+
+  }
 }

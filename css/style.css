@@ -11290,7 +11290,7 @@ header {
 
 .cont__featured {
   width: 100%;
-  background-color: #bfbfbf;
+  background-color: #57973f;
   color: white;
   text-align: center;
 }
@@ -11382,6 +11382,32 @@ footer {
   color: #f2f2f2;
   text-align: center;
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .cont {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .cont__featured {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .hero {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cont {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .product-cont {
