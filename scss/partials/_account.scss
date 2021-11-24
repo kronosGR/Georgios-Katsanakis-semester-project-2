@@ -52,3 +52,31 @@
     }
   }
 }
+
+@media screen and (min-width: $medium-width) {
+  .acc {
+    &__products {
+      width: 90%;
+    }
+  }
+
+  .product-item {
+    &__img {
+      width: 90px;
+    }
+  }
+}
+
+@media screen and (min-width: $large-width) {
+  .acc {
+    &__products {
+      width: 80%;
+    }
+  }
+
+  .product-item {
+    &__img {
+      width: 120px;
+    }
+  }
+}

@@ -11182,6 +11182,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   padding: 2rem;
 }
 
+hr {
+  color: #57973f;
+}
+
 @-webkit-keyframes spinner-animation {
   0% {
     -webkit-transform: rotate(0deg);
@@ -11634,5 +11638,23 @@ footer {
           filter: grayscale(20%);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .acc__products {
+    width: 90%;
+  }
+  .product-item__img {
+    width: 90px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .acc__products {
+    width: 80%;
+  }
+  .product-item__img {
+    width: 120px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
