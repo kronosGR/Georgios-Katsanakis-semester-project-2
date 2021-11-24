@@ -48,6 +48,7 @@ formEl.addEventListener('submit', async (evt) => {
 
   const feedback = document.querySelector('.feedback');
   formEl.reset()
+  window.scrollTo(0,0);
   feedback.style.display = 'inline';
   feedback.style.height = '65px';
   setTimeout(() => {

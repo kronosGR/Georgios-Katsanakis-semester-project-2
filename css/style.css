@@ -2258,7 +2258,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #c0faaa;
+  background-color: #f8fcf7;
   background-clip: padding-box;
   border: 2px solid #57973f;
   -webkit-appearance: none;
@@ -2288,7 +2288,7 @@ progress {
 
 .form-control:focus {
   color: #212529;
-  background-color: #c0faaa;
+  background-color: #f8fcf7;
   border-color: #57973f;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
@@ -2320,7 +2320,7 @@ progress {
 }
 
 .form-control:disabled, .form-control[readonly] {
-  background-color: #c0faaa;
+  background-color: #f8fcf7;
   opacity: 1;
 }
 
@@ -2561,11 +2561,11 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #fff;
+  background-color: #f8fcf7;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 2px solid #57973f;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2573,7 +2573,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input[type="checkbox"] {
-  border-radius: 0.25em;
+  border-radius: 0;
 }
 
 .form-check-input[type="radio"] {
@@ -2586,15 +2586,15 @@ textarea.form-control-lg {
 }
 
 .form-check-input:focus {
-  border-color: #86b7fe;
+  border-color: #57973f;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
           box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 .form-check-input:checked {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: #57973f;
+  border-color: #57973f;
 }
 
 .form-check-input:checked[type="checkbox"] {
@@ -11591,12 +11591,12 @@ footer {
   font-size: 1.4rem;
   font-weight: 500;
   color: #212529;
-  border-bottom: 1px solid #212529;
+  border-bottom: 1px solid #57973f;
   margin: 0 0.5rem;
 }
 
 .acc__menu--link:hover, .acc__menu--link--active {
-  background-color: #212529;
+  background-color: #57973f;
   color: white;
 }
 

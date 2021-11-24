@@ -16,48 +16,53 @@
     <div class="loading__spinner"></div>
     Please wait. Loading...
   </div>
-  <header class="p-3 text-white ">
-    <div class="container">
-      <div class="d-flex flex-no-wrap align-items-center justify-content-sm-start nav">
+  <header class="py-3 text-white">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
         <a href="index.html" class="d-flex align-items-center col-1 mb-2 mb-lg-0 text-white text-decoration-none">
           <img src="/assets/logo-sm.png" alt="logo" class="logo" />
         </a>
-
-        <ul class="nav col-10 col-md-5 mb-2 ms-2 justify-content-start mb-md-0 ps-4">
-          <li><a href="index.html" class="nav-link px-2 text-white nav__a">
-              <img src="assets/icons/home.png" alt="home" class="nav__icon" />
-              Home
-            </a>
-          </li>
-          <li><a href="products.html" class="nav-link px-2 text-white nav__a">
-              <img src="assets/icons/products.png" alt="home" class="nav__icon" />Products</a></li>
-        </ul>
-        <ul class="nav justify-content-end text-center col-12 col-md-5">
-          <li><a href="shopping-cart.html" class="nav-link px-2 text-white nav__a sec">
-              <img src="assets/icons/cart.png" alt="home" class="nav__icon--sm" /><span id="counter">(0)</span></a></li>
-
-          <li id="account">
-            <a href="account.html" class="nav-link px-2 text-white nav__a  sec nav--active">
-              <img src="assets/icons/user.png" alt="home" class="nav__icon--sm" />
-              Account
-            </a>
-          </li>
-          <li>
-            <a id="login" href="login.html" class="nav-link px-2 text-white nav__a sec"> </a>
-          </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarMain">
+          <ul class="navbar-nav me-auto mb-auto my-md-2 navbar-nav-scroll">
+            <li class="nav-item"><a href="index.html" class="nav-link px-4 text-white nav__a">
+                <img src="assets/icons/home.png" alt="home" class="nav__icon" />
+                Home
+              </a>
+            </li>
+            <li class="nav-item"><a href="products.html" class="nav-link px-4 text-white nav__a">
+                <img src="assets/icons/products.png" alt="home" class="nav__icon" />Products</a></li>
+          </ul>
+          <ul class="navbar-nav me-auto me-md-0 navbar-nav-scroll">
+            <li><a href="shopping-cart.html" class="nav-link px-4 text-white nav__a sec">
+                <img src="assets/icons/cart.png" alt="home" class="nav__icon" /><span id="counter">(0)</span></a>
+            </li>
+            <li id="account">
+              <a href="account.html" class="nav-link px-4 text-white nav__a nav--active">
+                <img src="assets/icons/user.png" alt="home" class="nav__icon" />
+                Account
+              </a>
+            </li>
+            <li>
+              <a id="login" href="login.html" class="nav-link px-4 text-white nav__a"> </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
-  <main class="d-flex flex-wrap justify-content-center">
-    <h1>Edit product</h1>
+  <main class="d-flex flex-wrap justify-content-center mb-5">
+    <h1 class="w-100 text-center m-5">Edit product</h1>
     <ul class="nav col-12 mb-2 ms-4 justify-content-center d-flex flex-row">
       <li class="nav-item"><a href="account.html" class="nav-link px-2 acc__menu--link">Products</a>
       </li>
       <li class="nav-item"><a href="account_add.html" class="nav-link px-2 acc__menu--link acc__menu--link--active">Add
           Product</a></li>
     </ul>
-    <div class="feedback">Product added...</div>
+    <div class="feedback w-100 text-center m-5">Product added...</div>
     <div class="cont">
       <form class="login-form w-75">
         <input type="hidden" id="id" />
@@ -91,6 +96,10 @@
   <footer>
     KronosGR Copyright &copy 2021
   </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>

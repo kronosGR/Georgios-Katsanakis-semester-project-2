@@ -9,7 +9,7 @@ $white: #f2f2f2;
 $gray-light: #bfbfbf;
 $gray: #8c8c8c;
 $green: #57973f;
-$green-light: #c0faaa;
+$green-light: #f8fcf7;
 $black: #212529;
 
 $navbar-toggler-border-radius: 0;
@@ -26,3 +26,10 @@ $input-disabled-bg: $green-light;
 
 $input-focus-border-color: $green;
 $input-focus-bg: $green-light;
+
+$form-check-input-bg: $green-light;
+$form-check-input-border: 2px solid $green;
+$form-check-input-border-radius: 0;
+$form-check-input-checked-bg-color: $green;
+$form-check-input-focus-border: $green;
+$form-check-input-checked-border-color: $green;
