@@ -1,5 +1,5 @@
 import { getProduct, editProduct } from './strapi.js';
-import { getQueryString, updateCartCount, updateLoginBtn, validUrl } from './utils.js';
+import { getQueryString, updateCartCount, updateLoginBtn, validUrl,checkAuthorization } from './utils.js';
 
 const titleEl = document.querySelector('#title');
 const priceEl = document.querySelector('#price');
@@ -13,6 +13,7 @@ const buttonEl = document.querySelector('form > button');
 
 updateCartCount('#counter');
 updateLoginBtn('#login');
+checkAuthorization();
 
 const id = getQueryString('id');
 let product = {};
