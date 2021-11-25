@@ -66,8 +66,8 @@ formEl.addEventListener('submit', async (evt) => {
   await editProduct(product, idEl.value);
 
   showProduct(idEl.value);
-  const feedback = document.querySelector('.feedback');
-  formEl.reset()
+  const feedback = document.querySelector('.feedback');  
+  window.scrollTo(0,0);
   feedback.style.display = 'inline';
   feedback.style.height = '65px';
   setTimeout(() => {
