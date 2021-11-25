@@ -117,6 +117,14 @@ footer{
   color: $white;
   text-align: center;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  img, p{
+    display: block;
+    margin: 1rem;
+  }
 }
 
 @media screen and(min-width: $medium-width) {
