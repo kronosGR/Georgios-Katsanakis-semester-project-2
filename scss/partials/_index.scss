@@ -12,8 +12,17 @@
   margin-top: 2rem;
 
 }
+.intro{
+  width: 90%;
+  text-align: left;
+  margin-bottom: 4rem;
+  background-color: $gray-light;
+  padding: 2rem;
+  border-radius: 10px;
+}
 
-.cont{
+.cont
+{
   width: 95%;
   border: 1px solid $gray-light;
   box-shadow: 3px 3px 6px $gray-light;
@@ -118,16 +127,42 @@ footer{
   text-align: center;
   font-weight: bold;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 
-  img, p{
+  img{
     display: block;
-    margin: 1rem;
+    margin: 1rem auto;
+    width: 150px;
+  }
+
+  & div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    & p{
+    line-height: 1.2rem;
+    }
+
+    & p:first-of-type{
+      font-family: $heading-font;
+      font-size: 1.6rem;
+    }
+
+    & i{
+      padding: 0.3rem;
+    }
   }
 }
 
 @media screen and(min-width: $medium-width) {
+  .intro{
+    width: 75%;
+  }
+
   .cont{
     width: 90%;
     margin: 0 auto;
@@ -142,9 +177,22 @@ footer{
     height: 400px;
     width: 100%;
   }
+
+  footer{
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    & div{
+      flex-basis: 33%;
+    }
+  }
 }
 
 @media screen and(min-width: $large-width) {
+  .intro{
+    width: 60%;
+  }
+
   .cont{
     width: 80%;
     margin: 0 auto;

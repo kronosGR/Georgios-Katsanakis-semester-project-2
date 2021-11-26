@@ -11160,7 +11160,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border-bottom: 5px solid white;
   border-top: 5px solid white;
   border-radius: 50%;
-  margin-bottom: 2rem;
+  margin: 5rem 0;
   -webkit-animation: spinner-animation 3s infinite linear;
           animation: spinner-animation 3s infinite linear;
 }
@@ -11274,6 +11274,15 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+}
+
+.intro {
+  width: 90%;
+  text-align: left;
+  margin-bottom: 4rem;
+  background-color: #bfbfbf;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .cont {
@@ -11400,6 +11409,10 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -11407,12 +11420,43 @@ footer {
       flex-wrap: wrap;
 }
 
-footer img, footer p {
+footer img {
   display: block;
-  margin: 1rem;
+  margin: 1rem auto;
+  width: 150px;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3rem;
+}
+
+footer div p {
+  line-height: 1.2rem;
+}
+
+footer div p:first-of-type {
+  font-family: "Open Sans Condensed", serif;
+  font-size: 1.6rem;
+}
+
+footer div i {
+  padding: 0.3rem;
 }
 
 @media screen and (min-width: 768px) {
+  .intro {
+    width: 75%;
+  }
   .cont {
     width: 90%;
     margin: 0 auto;
@@ -11429,9 +11473,24 @@ footer img, footer p {
     height: 400px;
     width: 100%;
   }
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  footer div {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
 }
 
 @media screen and (min-width: 992px) {
+  .intro {
+    width: 60%;
+  }
   .cont {
     width: 80%;
     margin: 0 auto;
