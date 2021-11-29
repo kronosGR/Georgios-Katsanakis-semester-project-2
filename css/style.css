@@ -11400,7 +11400,7 @@ header {
 }
 
 footer {
-  margin: auto 0;
+  margin: 5rem 0;
   padding: 1rem;
   background-color: #57973f;
   color: #f2f2f2;
@@ -11569,7 +11569,7 @@ footer div i {
 
 @media screen and (min-width: 992px) {
   .product-cont {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
   }
 }
