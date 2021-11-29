@@ -20,7 +20,7 @@ export default async function (id) {
     <img src="${product.image_url}" alt="${product.title}" class="product-cont__img" />
     <p class="product-cont__desc">${product.description}</p>
     <div class="product-cont__footer">
-      <div class="product-cont__price">$${product.price}</div>
+      <div class="product-cont__price">$${product.price.toFixed(2)}</div>
       <a href="#" class="product-cont__cta">Add to cart</a>
     </div>
 
