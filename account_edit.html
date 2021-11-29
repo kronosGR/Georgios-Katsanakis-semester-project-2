@@ -83,7 +83,8 @@
         </div>
         <div class="form-group  my-3">
           <label for="image">Image filename</label>
-          <input type="text" class="form-control" id="image">
+          <input class="form-control" type="file" id="fileupload">
+          <p id="image-upload" class="d-none m-2 text-secondary">Please wait image is uploading</p>         
           <img class="w-50 my-3" id="product-image" />
         </div>
         <button disabled type="submit" class="btn mt-4 btn-primary login-form__button w-100 ">Update</button>
@@ -104,7 +105,7 @@
     </div>
     <div>
       <p>About us</p>
-      <p>
+      <p class="px-5">
         The Best for You and Your Pets. We’re proud to offer all the best for you and your pets
         365 days of the year.
       </p>
